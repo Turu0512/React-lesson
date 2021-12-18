@@ -1,9 +1,14 @@
 import React from "react";
 
+import SearchBar from "./component/SearchBar";
+
 const App = () => {
+  const onSearchSubmit = (term) => {
+    console.log(term);
+  };
   return (
-    <div>
-      <p>App</p>
+    <div className="ui container" style={{ marginTop: "30px" }}>
+      <SearchBar onSubmit={onSearchSubmit} />
     </div>
   );
 };
